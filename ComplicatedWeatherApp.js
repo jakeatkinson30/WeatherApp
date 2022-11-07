@@ -7,8 +7,9 @@ const api = {
 const searchbox = document.querySelector(".search-box");
 searchbox.addEventListener("keypress", setQuery);
 
-function setQuery(any) {
-    if(any.keyCode == 13) {
+function setQuery(e) {
+    if(e.code === 'Enter') {
+        e.preventDefault();
         getResults(searchbox.value);
     }
 }
@@ -49,34 +50,3 @@ function dateBuilder(d) {
 
     return `${day} ${date} ${month} ${year}`;
 }
-
-
-
-
-
-// window.addEventListener("load", () => {
-//     let lat;
-//     let long;
-
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition((position) => {
-//              long = position.coords.longitude;
-//              lat = position.coords.latitude;
-//              const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api}&units=metric`;
-
-//              fetch(base).then((response) => {
-//                     return response.json();
-//                 }).then((data) => {
-//                     const { temp } = data.main;
-//                     const place = data.main;
-//                     const { description, icon } = data.weather[0];
-//                     const { sunrise, sunset } = data.sys;
-
-//                     const fahrenheit = (temp * 9) / 5 + 32;
-
-//                     const sunriseGMT = new Date(sunrise * 1000);
-//                     const sunsetGMT = new Date(sunset * 1000);
-//                 });
-//         });
-//     }
-// })
