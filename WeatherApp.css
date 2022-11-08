@@ -7,12 +7,12 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url('../WeatherApp/cloudsApp.jpg') no-repeat;
+    background: url('./cloudsApp.jpg') no-repeat;
     /* background-position: top center; */
     background-size: cover;
 }
 
-.app-wrapp {
+.contentWrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 50px 15px 15px;
 }
 
@@ -60,19 +61,28 @@ main {
     text-align: center;
 }
 
-.location .city {
+.introText {
+    color: black;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    width: 400px;
+    text-align: center;
+}
+
+.place .city {
     color: black;
     font-size: 2em;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-.location .date {
+.place .todaysDate {
     color: black;
     font-size: 1em;
 }
 
-.current .temp {
+.forecast .temp {
     color: black;
     font-size: 5em;
     font-weight: 800;
@@ -80,7 +90,7 @@ main {
     text-shadow: 2px 1px rgba(0, 0, 0, 0.6);
 }
 
-.current .weather {
+.forecast .weather {
     color: black;
     font-size: 2em;
     font-weight: 500;
@@ -88,7 +98,7 @@ main {
     text-shadow: 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.current .hi-low {
+.forecast .hiLow {
     color: black;
     font-size: 1.2em;
     font-weight: 500;
