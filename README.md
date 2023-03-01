@@ -1,6 +1,17 @@
-Weather App
+## Weather App
 
-For this project I wanted to incorporate real-time data using the OpenWeatherAPI. This API wa simple and easy to work with, which is why I chose this for my first API project. This project furthered my experience in working with API's and JavaScript.
+ This is a simple web application that provides weather information for a user's location using the OpenWeatherMap API.
 
-In order to run this application, the user is to type the place they wish to view the weather in, and hit 'enter'.
+## Features
+- User can search for a location and get the current weather information
+- The app displays the location, current temperature, weather condition, and minimum and maximum temperature for the day
+- The date and time are displayed in the header
 
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Credits
+
+This app uses the OpenWeatherMap API to provide weather information.
